@@ -1,0 +1,16 @@
+{
+  "name": "promise-implementation",
+  "version": "0.0.1",
+  "description": "A possible implementation of Promises/A+",
+  "main": "index.js",
+  "repository": "git@github.com:kawhi66/promise-implementation.git",
+  "author": "https://kawhi.site",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}
