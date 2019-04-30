@@ -1,5 +1,5 @@
 {
-  "name": "promise-implementation",
+  "name": "nuoyan",
   "version": "0.0.1",
   "description": "A possible implementation of Promises/A+",
   "main": "index.js",
