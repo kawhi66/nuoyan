@@ -1,17 +1,26 @@
-const NuoYan = require('.')
+const NuoYan = require('..')
 
-jest.setTimeout(10000)
-test('NuoYan.done', done => {
+jest.setTimeout(1000)
+test('NuoYan.done.resolve', done => {
+    const testStr = 'this is a resolve test'
     new NuoYan(function(resolve, reject) {
         setTimeout(function() {
-            resolve(123)
-        }, 1000)
+            resolve(testStr)
+        }, 0)
     }).done(function(result) {
-        expect(result).toBe(123)
+        expect(result).toBe(testStr)
         done()
-    }, function(error) {
-        console.error(error)
-        done()
+    })
+})
+
+test('NuoYan.done.reject', done => {
+    const testStr = 'this is a reject test'
+    new NuoYan(function(resolve, reject) {
+        setTimeout(function() {
+            reject(testStr)
+        }, 0)
+    }).done(null, function(error) {
+        expect(error).toBe(testStr)
     })
 })
 
